@@ -5,5 +5,23 @@ import os
 
 load_dotenv()
 
-yt_tool = YoutubeChannelSearchTool(youtube_channel_handle=os.environ['CHANNEL_HANDLE'])
+hf_ep = os.environ['HUGGINGFACE_ENDPOINT']
+
+yt_tool = YoutubeChannelSearchTool(
+    youtube_channel_handle=os.environ['CHANNEL_HANDLE'],
+    config={
+        "llm": {
+            "provider": "huggingface",
+            "config": {
+                "model": hf_ep
+            }
+        },
+        "embedder": {
+            "provider": "huggingface",
+            "config": {
+                "model": hf_ep
+            }
+        }
+    }
+)
 
