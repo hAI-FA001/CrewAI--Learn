@@ -40,7 +40,7 @@ class BlogWritingCrew():
 	@agent
 	def blog_researcher(self) -> Agent:
 		return Agent(
-			config=self.agents_config['researcher'],
+			config=self.agents_config['blog_researcher'],
 			memory=True,
 			allow_delegation=True,
 			verbose=True,

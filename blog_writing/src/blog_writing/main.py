@@ -5,7 +5,7 @@ from blog_writing.crew import BlogWritingCrew
 import os
 from dotenv import load_dotenv
 
-load_dotenv
+load_dotenv()
 TOPIC = os.environ['TOPIC']
 
 
