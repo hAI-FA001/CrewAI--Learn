@@ -5,11 +5,8 @@ blog_researcher:
     Get the relevant video content for topic {topic} from YT channel.
   backstory: >
     Expert in understanding videos in Data Science, Machine Learning and GenAI, and providing suggestions.
-  memory: True
-  allow_delegation: True
   llm: llm
   tools: [yt_tool]
-  verbose: True
 
 blog_writer:
   role: >
@@ -18,8 +15,5 @@ blog_writer:
     Narrate compelling tech stories about the video {topic} from YT channel.
   backstory: >
     With a flair for simplifying complex topics, you craft engaging narratives that captivate and educate, bringing new discoveries to light in an accessible manner.
-  memory: True
-  allow_delegation: True
   llm: llm
   tools: [yt_tool]
-  verbose: True
