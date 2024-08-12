@@ -1,6 +1,7 @@
 from crewai import Agent
 
 from tools import yt_tool
+from llm import llm
 
 
 
@@ -14,6 +15,7 @@ blog_researcher = Agent(
     ),
     tools=[yt_tool],
     allow_delegation=True,
+    llm=llm,
 )
 
 blog_writer = Agent(
@@ -27,5 +29,6 @@ blog_writer = Agent(
         " discoveries to light in an accessible manner."
     ),
     tools=[yt_tool],
-    allow_delegation=False
+    allow_delegation=False,
+    llm=llm,
 )
