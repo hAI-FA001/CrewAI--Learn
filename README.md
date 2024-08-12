@@ -1,4 +1,4 @@
-<a href="https://www.youtube.com/watch?v=UV81LAb3x2g">Tutorialfollowed.</a>
+<a href="https://www.youtube.com/watch?v=UV81LAb3x2g">Tutorial followed.</a>
 
 "blog_writing" contains the same project but made using `crewai create crew <project>` as a base
 
