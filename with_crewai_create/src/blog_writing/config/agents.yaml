@@ -9,6 +9,7 @@ blog_researcher:
   allow_delegation: True
   llm: llm
   tools: [yt_tool]
+  verbose: True
 
 blog_writer:
   role: >
@@ -21,3 +22,4 @@ blog_writer:
   allow_delegation: True
   llm: llm
   tools: [yt_tool]
+  verbose: True

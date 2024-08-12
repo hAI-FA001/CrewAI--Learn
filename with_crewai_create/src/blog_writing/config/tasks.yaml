@@ -1,17 +1,16 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    Identify the video {topic}. Get detailed information about the video from the channel.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    A comprehensive 3 paragraphs long report based on the {topic} of video content.
+  agent: blog_researcher
+  tools: [yt_tool]
 
-reporting_task:
+writing_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Get information from the YT channel on the topic {topic}.
   expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Summarize the info from the YT channel's video on the topic {topic} and create content for the blog.
+  agent: blog_writer
+  tools: [yt_tool]
+  output_file: new-blog-post.md
