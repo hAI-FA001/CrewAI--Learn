@@ -2,17 +2,19 @@
 import sys
 from blog_writing.crew import BlogWritingCrew
 
-# This main file is intended to be a way for your to run your
-# crew locally, so refrain from adding necessary logic into this file.
-# Replace with inputs you want to test with, it will automatically
-# interpolate any tasks and agents information
+import os
+from dotenv import load_dotenv
+
+load_dotenv
+TOPIC = os.environ['TOPIC']
+
 
 def run():
     """
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs'
+        'topic': TOPIC
     }
     BlogWritingCrew().crew().kickoff(inputs=inputs)
 
@@ -22,7 +24,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs"
+        "topic": TOPIC
     }
     try:
         BlogWritingCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -45,7 +47,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs"
+        "topic": TOPIC
     }
     try:
         BlogWritingCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
